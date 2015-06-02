@@ -1,1 +1,15 @@
-//Hello world
+<phpunit bootstrap="./test/lib/bootstrap.php">
+    <testsuites>
+        <testsuite name="RsdBitmask Test Suite">
+            <directory>./test/unit</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <blacklist>
+        </blacklist>
+    </filter>
+    <logging>
+        <log type="tap" target="/tmp/phpunit-result/rsdbitmask-current-tap.txt"/>
+        <log type="coverage-html" target="/tmp/phpunit-result/rsdbitmask-current" showUncoveredFiles="true"/>
+    </logging>
+</phpunit>
