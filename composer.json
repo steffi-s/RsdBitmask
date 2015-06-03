@@ -1,11 +1,11 @@
 {
   "name": "rsd/rsdbitmask",
-  "description": "",
+  "description": "Bitmask handling",
   "minimum-stability": "stable",
   "license": "LGPL-3.0",
   "authors": [
     {
-      "name": "Rene Schmidt",
+      "name": "Stefanie Schmidt",
       "email": "rene+_pkg@reneschmidt.de"
     }
   ],
