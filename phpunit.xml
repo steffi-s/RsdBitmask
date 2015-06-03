@@ -5,8 +5,9 @@
         </testsuite>
     </testsuites>
     <filter>
-        <blacklist>
-        </blacklist>
+        <whitelist>
+            <directory>./src</directory>
+        </whitelist>
     </filter>
     <logging>
         <log type="tap" target="/tmp/phpunit-result/rsdbitmask-current-tap.txt"/>

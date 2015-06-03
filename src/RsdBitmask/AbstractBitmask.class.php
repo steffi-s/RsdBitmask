@@ -1,48 +1,100 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: steffi
- * Date: 02.06.15
- * Time: 14:42
- */
 
+/**
+ * Simple bitmask class to set bitmasks
+ *
+ * PHP Version 5.5
+ *
+ * @category Bitmask
+ * @package  RsdBitmask
+ * @author   Stefanie Schmidt <stefanie@reneschmidt.de>
+ * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
+ * @link     https://reneschmidt.de/
+ */
 namespace RsdBitmask;
 
-
+/**
+ * class to set flags of bitmasks
+ *
+ * 1. checks whether a flag is positive or not
+ * 2. checks whether a flag is power of two or not
+ * 3. sets the flag and returns the bitmask as an int
+ * 4. gets the actual bitmask as an int
+ *
+ * @category Bitmask
+ * @package  RsdBitmask
+ * @author   Stefanie Schmidt <stefanie@reneschmidt.de>
+ * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
+ * @link     https://reneschmidt.de/
+ */
 abstract class AbstractBitmask
 {
     /**
-     * @var int
+     * @var int Bitmask in int representation
      */
-    public $bitmaskPayload = 0;
+    protected $bitmask = 0;
 
     /**
-     * @param int $bitmaskPayload
+     * Constructor
+     * @param int $bitmask Bitmask in int representation
+     * @throws \Exception
      */
-    public function __construct($bitmaskPayload)
+    public function __construct($bitmask)
     {
-        $this->bitmaskPayload = $bitmaskPayload;
+        if ($bitmask < 0) {
+            throw new \Exception("Bitmask must not be negative!", 2);
+        }
+        $this->bitmask = $bitmask;
     }
 
-    public function is($flag) {
-        return ($this->bitmaskPayload & $flag) === $flag;
+    /**
+     * Getter for bitmask
+     * @return int
+     */
+    public function getBitmask()
+    {
+        return $this->bitmask;
     }
 
-    public function setFlag($flag, $set = true) {
+    /**
+     * Check whether a flag is set in the bitmask or not
+     * @param int $flag Bitmask flag
+     * @return bool
+     */
+    public function is($flag)
+    {
+        return ($this->bitmask & $flag) === $flag;
+    }
+
+    /**
+     * Set flag
+     * @param int  $flag Bitmask flag
+     * @param bool $set  Set if true otherwise unset
+     * @return int bitmask
+     * @throws \Exception
+     */
+    public function setFlag($flag, $set = true)
+    {
         if ($flag != 0 && !$this->isPowerOfTwo((int)$flag)) {
-            throw new \Exception("Illegal flag.");
+            throw new \Exception("Illegal flag.", 1);
         }
 
         if ($set) {
-            $this->bitmaskPayload |= (int)$flag;
+            $this->bitmask |= (int)$flag;
         } else {
-            $this->bitmaskPayload &= ~(int)$flag;
+            $this->bitmask &= ~(int)$flag;
         }
 
-        return $this->bitmaskPayload;
+        return $this->getBitmask();
     }
 
-    public function isPowerOfTwo($flag) {
+    /**
+     * Checks whether a flag is power of two or not
+     * @param int $flag Flag of bitmask
+     * @return bool
+     */
+    public function isPowerOfTwo($flag)
+    {
         return $flag > 0 && !($flag & ($flag - 1));
     }
-} 
+}

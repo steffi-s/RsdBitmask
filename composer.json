@@ -21,7 +21,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-        "RsdBitmask\\": "src/RsdBitmask/"
+        "RsdBitmask\\": "src/RsdBitmask/",
+        "RsdBitmaskTest\\": "test/lib"
     }
   }
 }
