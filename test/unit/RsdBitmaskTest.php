@@ -14,12 +14,12 @@ namespace RsdBitmaskTest;
 /**
  * Test RsdBitmask
  *
- * @category Password
+ * @category   Password
  * @package    RsdBitmask
  * @subpackage TestUnit
  * @author     Stefanie Schmidt <stefanie@reneschmidt.de>
- * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link     https://reneschmidt.de/
+ * @license    https://www.gnu.org/licenses/lgpl.html LGPLv3
+ * @link       https://reneschmidt.de/
  */
 class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 {
@@ -45,14 +45,23 @@ class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
         $firstBitmask = new FirstBitmask(0);
 
         $this->assertFalse($firstBitmask->is(FirstBitmask::IS_A));
+        $this->assertFalse($firstBitmask->is(FirstBitmask::IS_B));
+        $this->assertFalse($firstBitmask->is(FirstBitmask::IS_C));
 
         $firstBitmask->setFlag(FirstBitmask::IS_A);
+        $firstBitmask->setFlag(FirstBitmask::IS_C);
 
         $this->assertTrue($firstBitmask->is(FirstBitmask::IS_A));
+        $this->assertFalse($firstBitmask->is(FirstBitmask::IS_B));
+        $this->assertTrue($firstBitmask->is(FirstBitmask::IS_C));
 
-        $firstBitmask->setFlag(FirstBitmask::IS_A, false);
+        $firstBitmask->unsetFlag(FirstBitmask::IS_A);
 
         $this->assertFalse($firstBitmask->is(FirstBitmask::IS_A));
+        $this->assertFalse($firstBitmask->is(FirstBitmask::IS_B));
+        $this->assertTrue($firstBitmask->is(FirstBitmask::IS_C));
+
+        $this->assertSame(4, $firstBitmask->getBitmask());
     }
 
     /**

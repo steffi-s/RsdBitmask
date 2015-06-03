@@ -89,6 +89,16 @@ abstract class AbstractBitmask
     }
 
     /**
+     * Unset flag
+     * @param int $flag Bitmask flag
+     * @return int bitmask
+     */
+    public function unsetFlag($flag)
+    {
+        return $this->setFlag($flag, false);
+    }
+
+    /**
      * Checks whether a flag is power of two or not
      * @param int $flag Flag of bitmask
      * @return bool
