@@ -4,6 +4,7 @@
  *
  * PHP Version 5.5
  *
+ * @category Bitmask
  * @package  RsdBitmask
  * @author   Rene Schmidt <rene@reneschmidt.de>
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
@@ -11,16 +12,6 @@
  */
 namespace RsdBitmaskTest;
 
-/**
- * Test RsdBitmask
- *
- * @category   Password
- * @package    RsdBitmask
- * @subpackage TestUnit
- * @author     Stefanie Schmidt <stefanie@reneschmidt.de>
- * @license    https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link       https://reneschmidt.de/
- */
 class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 {
     /**

@@ -3,6 +3,11 @@
 /**
  * Simple bitmask class to set bitmasks
  *
+ * 1. checks whether a flag is positive or not
+ * 2. checks whether a flag is power of two or not
+ * 3. sets the flag and returns the bitmask as an int
+ * 4. gets the actual bitmask as an int
+ *
  * PHP Version 5.5
  *
  * @category Bitmask
@@ -13,20 +18,6 @@
  */
 namespace RsdBitmask;
 
-/**
- * class to set flags of bitmasks
- *
- * 1. checks whether a flag is positive or not
- * 2. checks whether a flag is power of two or not
- * 3. sets the flag and returns the bitmask as an int
- * 4. gets the actual bitmask as an int
- *
- * @category Bitmask
- * @package  RsdBitmask
- * @author   Stefanie Schmidt <stefanie@reneschmidt.de>
- * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link     https://reneschmidt.de/
- */
 abstract class AbstractBitmask
 {
     /**
