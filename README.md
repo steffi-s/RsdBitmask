@@ -2,7 +2,7 @@
 
 RsdBitmask is a simple class to set flags of bitmasks
 
-1. Sets or unsets flags.
+1. Sets or unsets bitmask flags.
 1. Checks whether a flag is power of two.
 
 ## Tests
