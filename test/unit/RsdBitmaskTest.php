@@ -1,4 +1,7 @@
 <?php
+
+namespace RsdBitmaskTest;
+
 /**
  * RsdBitmask tests
  *
@@ -10,8 +13,6 @@
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
  * @link     https://reneschmidt.de/
  */
-namespace RsdBitmaskTest;
-
 class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 {
     /**

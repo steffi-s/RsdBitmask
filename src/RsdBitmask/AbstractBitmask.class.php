@@ -1,5 +1,7 @@
 <?php
 
+namespace RsdBitmask;
+
 /**
  * Simple bitmask class to set bitmasks
  *
@@ -16,8 +18,6 @@
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
  * @link     https://reneschmidt.de/
  */
-namespace RsdBitmask;
-
 abstract class AbstractBitmask
 {
     /**

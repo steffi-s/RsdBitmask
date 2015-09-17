@@ -1,4 +1,9 @@
 <?php
+
+namespace RsdBitmaskTest;
+
+use RsdBitmask\AbstractBitmask;
+
 /**
  * Simple class with constant bitmask flags
  * For testing only
@@ -11,10 +16,6 @@
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
  * @link     https://reneschmidt.de/
  */
-namespace RsdBitmaskTest;
-
-use RsdBitmask\AbstractBitmask;
-
 class FirstBitmask extends AbstractBitmask
 {
     const IS_A = 1;
