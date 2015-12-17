@@ -1,4 +1,4 @@
-<phpunit bootstrap="./test/lib/bootstrap.php">
+<phpunit bootstrap="./test/unit/lib/bootstrap.php">
     <testsuites>
         <testsuite name="RsdBitmask Test Suite">
             <directory>./test/unit</directory>

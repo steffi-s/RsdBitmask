@@ -1,6 +1,6 @@
 <?php
 
-namespace RsdBitmaskTest;
+namespace RsdBitmask\Tests\Stubs;
 
 use RsdBitmask\AbstractBitmask;
 

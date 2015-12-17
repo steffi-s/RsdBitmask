@@ -16,13 +16,12 @@
   },
   "autoload": {
     "psr-4": {
-      "RsdBitmask\\": "src/RsdBitmask/"
+      "RsdBitmask\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-        "RsdBitmask\\": "src/RsdBitmask/",
-        "RsdBitmaskTest\\": "test/lib"
+        "RsdBitmask\\Tests\\": "test/unit"
     }
   }
 }

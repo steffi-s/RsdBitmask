@@ -1,6 +1,8 @@
 <?php
 
-namespace RsdBitmaskTest;
+namespace RsdBitmask\Tests;
+
+use RsdBitmask\Tests\Stubs\FirstBitmask;
 
 /**
  * RsdBitmask tests
