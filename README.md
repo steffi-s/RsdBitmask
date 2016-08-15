@@ -2,6 +2,8 @@
 
 RsdBitmask is a simple class to set flags of bitmasks
 
+[![Build Status](https://api.travis-ci.org/steffi-s/RsdBitmask.svg)](https://travis-ci.org/steffi-s/RsdBitmask)
+
 1. Sets or unsets bitmask flags.
 1. Checks whether a flag is power of two.
 
@@ -13,7 +15,7 @@ There are some basic PHPUnit tests.
 
 Me:
 
-1. mailto:rene+_gth@reneschmidt.de
+1. mailto:stefanie@reneschmidt.de
 
 # Licence
 
