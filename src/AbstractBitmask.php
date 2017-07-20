@@ -14,9 +14,9 @@ namespace RsdBitmask;
  *
  * @category Bitmask
  * @package  RsdBitmask
- * @author   Stefanie Schmidt <stefanie@reneschmidt.de>
+ * @author   Stefanie Schmidt <stefanie+_gth@sdo.sh>
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link     https://reneschmidt.de/
+ * @link     https://sdo.sh/
  */
 abstract class AbstractBitmask
 {

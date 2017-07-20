@@ -6,10 +6,11 @@
   "authors": [
     {
       "name": "Stefanie Schmidt",
-      "email": "rene+_pkg@reneschmidt.de"
+      "email": "stefanie+_gth@sdo.sh"
     }
   ],
   "require-dev": {
+    "php": ">=5.4",
     "phpunit/phpunit": "4.5.*",
     "phpunit/php-code-coverage": "2.*",
     "squizlabs/php_codesniffer": "2.*"
@@ -21,7 +22,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-        "RsdBitmask\\Tests\\": "test/unit"
+      "RsdBitmask\\": "src/",
+      "RsdBitmask\\Tests\\": "test/unit"
     }
   }
 }

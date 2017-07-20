@@ -11,9 +11,9 @@ use RsdBitmask\Tests\Stubs\FirstBitmask;
  *
  * @category Bitmask
  * @package  RsdBitmask
- * @author   Rene Schmidt <rene@reneschmidt.de>
+ * @author   Rene Schmidt <rene@sdo.sh>
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link     https://reneschmidt.de/
+ * @link     https://sdo.sh/
  */
 class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 {
