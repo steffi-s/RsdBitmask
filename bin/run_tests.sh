@@ -12,5 +12,5 @@ if [ ! -f $file ] || [ $size -eq 0 ]; then
 
 fi
 
-./vendor/bin/phpcpd ./src ./test --exclude=./test/ui
+#./vendor/bin/phpcpd ./src ./test --exclude=./test/ui
 ./vendor/bin/phpunit --log-junit ./build/logs/junit.xml test
