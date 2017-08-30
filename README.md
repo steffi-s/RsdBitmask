@@ -13,11 +13,11 @@ There are some basic PHPUnit tests.
 
 Me:
 
-1. mailto:rene+_gth@reneschmidt.de
+1. mailto:stefanie+_gth@sdo.sh
 
 # Licence
 
-LGPL v3 or commercial licence :) from rene+_gth@reneschmidt.de.
+LGPL v3 or a commercial licence :) from stefanie+_gth@sdo.sh.
 
 # Source/Download
 

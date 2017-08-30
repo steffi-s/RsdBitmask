@@ -7,18 +7,17 @@ use RsdBitmask\Tests\Stubs\FirstBitmask;
 /**
  * RsdBitmask tests
  *
- * PHP Version 5.5
- *
  * @category Bitmask
  * @package  RsdBitmask
- * @author   Rene Schmidt <rene@reneschmidt.de>
+ * @author   Rene Schmidt <rene@sdo.sh>
  * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link     https://reneschmidt.de/
+ * @link     https://sdo.sh/
  */
-class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
+class RsdBitmaskTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Checks given bitmasks
+     *
      * @return void
      */
     public function testInit()
@@ -32,6 +31,7 @@ class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Checks whether given flags are set or not
+     *
      * @return void
      */
     public function testSetFlag()
@@ -60,6 +60,7 @@ class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Checks whether a flag is illegal
+     *
      * @return void
      */
     public function testSetIllegalFlag()
@@ -76,6 +77,7 @@ class RsdBitmaskTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Check whether negative bitmask detection actually works
+     *
      * @return void
      */
     public function testSetNegativeBitmask()

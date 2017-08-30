@@ -1,10 +1,16 @@
 #!/bin/sh
-file=/tmp/psr-2-rsd_ruleset_`date +"%H"`.xml
-url=https://raw.githubusercontent.com/rene-s/psr-2-rsd/master/psr-2-rsd_ruleset.xml
+# run tests locally or on Jenkins
 
-if [ ! -f $file ]; then
+mkdir -p ./build/logs
+
+file=/tmp/psr-2-rsd_ruleset_`date +"%d"`.xml
+url=https://raw.githubusercontent.com/rene-s/psr-2-rsd/master/psr-2-rsd_ruleset.xml
+size=`stat --printf="%s" $file 2>/dev/null`
+
+if [ ! -f $file ] || [ $size -eq 0 ]; then
     wget $url -O $file
+
 fi
 
-./vendor/bin/phpcs -v ./src ./test --standard=$file
-./vendor/bin/phpunit test
+#./vendor/bin/phpcpd ./src ./test --exclude=./test/ui
+./vendor/bin/phpunit --log-junit ./build/logs/junit.xml test $1 $2 $3 $4
