@@ -66,10 +66,10 @@ abstract class AbstractBitmask
      * @param int  $flag Bitmask flag
      * @param bool $set  Set if true otherwise unset
      *
-     * @return int
+     * @return self
      * @throws \Exception
      */
-    public function setFlag(int $flag, bool $set = true): int
+    public function setFlag(int $flag, bool $set = true): self
     {
         if ($flag != 0 && !$this->isPowerOfTwo($flag)) {
             throw new \Exception("Illegal flag.", 1);
@@ -81,7 +81,7 @@ abstract class AbstractBitmask
             $this->bitmask &= ~$flag;
         }
 
-        return $this->getBitmask();
+        return $this;
     }
 
     /**
@@ -89,9 +89,9 @@ abstract class AbstractBitmask
      *
      * @param int $flag Bitmask flag
      *
-     * @return int bitmask
+     * @return self
      */
-    public function unsetFlag(int $flag): int
+    public function unsetFlag(int $flag): self
     {
         return $this->setFlag($flag, false);
     }
